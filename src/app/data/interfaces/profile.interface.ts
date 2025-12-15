@@ -1,4 +1,4 @@
-export interface Profile {
+export interface ProfileInterface {
   id: number,
   username: string,
   avatarUrl: string | null,

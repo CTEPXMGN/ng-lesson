@@ -3,8 +3,16 @@
 :root {
   --dark-color: #000;
   --light-color: #fff;
-  --primary-color: #AE7AFF;
+  --primary-color: #ae7aff;
   --secondary-color: #00ff00;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,14 +25,14 @@ body {
   display: inline;
   background: var(--dark-color);
   color: var(--light-color);
-  padding: 4px 8px;
+  padding: 0 8px;
   border-radius: 4px;
   border: 1px solid var(--light-color);
   font-size: 12px;
-    line-height: 24px;
+  line-height: 24px;
   text-align: center;
   font-weight: 700;
-  margin-right: 4px;
+  height: 24px;
 }
 
 .btn {

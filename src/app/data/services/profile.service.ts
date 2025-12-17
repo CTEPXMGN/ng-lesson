@@ -14,4 +14,7 @@ export class Profile {
     return this.http.get< ProfileInterface[]>( `${this.baseApiUrl}/account/test_accounts`)
   }
   
+  getMe() {
+    return this.http.get<ProfileInterface>( `${this.baseApiUrl}/account/me`)
+  }
 }

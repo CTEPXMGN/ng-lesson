@@ -2,10 +2,11 @@ import { Component, inject, signal } from '@angular/core';
 import { ProfileCard } from "../../common-ui/profile-card/profile-card";
 import { Profile } from '../../data/services/profile.service';
 import { ProfileInterface } from '../../data/interfaces/profile.interface';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-search-page',
-  imports: [ProfileCard],
+  imports: [ProfileCard, NgForOf],
   templateUrl: './search-page.html',
   styleUrl: './search-page.scss',
 })

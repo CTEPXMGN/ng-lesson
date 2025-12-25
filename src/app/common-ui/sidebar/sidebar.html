@@ -12,13 +12,30 @@
   </ul>
 </nav>
 
-<p class="medium-text mb20">Подписчики</p>
+<p class="medium-text mb20 subscribers-title">Подписчики</p>
 
-<pre>{{ subscribers$ | async  | json }}</pre>
-
-<app-subscriber-card></app-subscriber-card>
+<div class="mb20">
+  @for (profile of subscribers$ | async; track profile.id) {
+  <app-subscriber-card [profile]="profile"></app-subscriber-card>
+  }
+</div>
 
 <div class="mt20 to-subscribers">
   <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text">Все подписчики</a>
   <svg icon="arrow" class="to-subscribers-icon"></svg>
 </div>
+
+<footer class="sidebar-footer">
+  @if (me(); as me) { @if(me.avatarUrl) {
+  <img [src]="me.avatarUrl | imgUrl" alt="avatar" />
+  } @else {
+  <img src="/assets/images/avatar-placeholder.png" alt="avatar-placeholder" />
+  }
+
+  <div class="medium-text username-text">{{ me.username }}</div>
+
+  <a [routerLink]="['/settings']" class="settings-btn">
+    <svg icon="settings" class="settings-icon"></svg>
+  </a>
+  }
+</footer>

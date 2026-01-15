@@ -32,9 +32,9 @@ export class Profile {
     return this.http.get<ProfileInterface>(`${this.baseApiUrl}account/${id}`);
   }
 
-  getSubscribersShortList() {
+  getSubscribersShortList(subsAmount: number = 3) {
     return this.http
       .get<Pageble<ProfileInterface>>(`${this.baseApiUrl}account/subscribers/`)
-      .pipe(map((res) => res.items.slice(0, 3)));
+      .pipe(map((res) => res.items.slice(0, subsAmount)));
   }
 }

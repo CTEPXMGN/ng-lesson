@@ -77,6 +77,12 @@ body {
   font-weight: 800;
 }
 
+.h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+}
+
 .h6 {
   font-size: 18px;
   line-height: 24px;
@@ -94,6 +100,13 @@ body {
   line-height: 16px;
   font-weight: 500;
   font-family: "JatBrains Mono", sans-serif;
+}
+
+.regular {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  font-family: 'JatBrains Mono', sans-serif;
 }
 
 .tt-control-label {

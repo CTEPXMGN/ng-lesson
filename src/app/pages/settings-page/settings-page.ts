@@ -3,10 +3,11 @@ import { ProfileHeader } from '../../common-ui/profile-header/profile-header';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Profile } from '../../data/services/profile.service';
 import { firstValueFrom } from 'rxjs';
+import { AvatarUpload } from "./avatar-upload/avatar-upload";
 
 @Component({
   selector: 'app-settings-page',
-  imports: [ProfileHeader, ReactiveFormsModule],
+  imports: [ProfileHeader, ReactiveFormsModule, AvatarUpload],
   templateUrl: './settings-page.html',
   styleUrl: './settings-page.scss',
 })

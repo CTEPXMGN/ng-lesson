@@ -8,10 +8,11 @@ import { AsyncPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImgUrlPipe } from "../../helpers/pipes/img-url-pipe";
 import { PostFeed } from "./post-feed/post-feed";
+import { SvgIcon } from "../../common-ui/svg-icon/svg-icon";
 
 @Component({
   selector: 'app-profile-page',
-  imports: [ProfileHeader, AsyncPipe, RouterLink, ImgUrlPipe, PostFeed],
+  imports: [ProfileHeader, AsyncPipe, RouterLink, ImgUrlPipe, PostFeed, SvgIcon],
   templateUrl: './profile-page.html',
   styleUrl: './profile-page.scss',
 })

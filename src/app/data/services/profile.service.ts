@@ -40,4 +40,10 @@ export class Profile {
   patchProfile(profile: Partial<ProfileInterface>) {
     return this.http.patch<ProfileInterface>(`${this.baseApiUrl}account/me`, profile);
   }
+
+  uploadAvatar(file: File) {
+    const fd = new FormData();
+    fd.append('image', file);
+    return this.http.post<ProfileInterface>(`${this.baseApiUrl}account/upload_image`, fd);
+  }
 }
